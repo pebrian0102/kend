@@ -1,0 +1,338 @@
+/* 
+Banner
+*/
+.banner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    color: #fafafa;
+
+}
+
+.banner-red {
+    background-color: #DA251C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.banner-red a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.banner .mouse {
+    position: absolute;
+    bottom: 60px;
+    animation: 1s updown infinite ease-in-out alternate;
+}
+
+@keyframes updown {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+.banner .mouse img {
+    width: 50px;
+}
+
+/* 
+Rekanan
+ */
+.rekanan {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.rekanan .box {
+    background-color: #fff;
+    border: 3px solid #000;
+    padding: 30px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0px 40px;
+    box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25);
+    transform: translateY(-120px);
+    background-image: url(/assets/img/bg.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.rekanan .box img {
+    width: 150px;
+    opacity: 0.7;
+}
+
+.rekanan .box img:hover {
+    opacity: 1;
+}
+
+
+/* 
+Tentang Kami
+*/
+.about {
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.about p {
+    margin: 20px 0px;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* 
+Info
+*/
+
+.info {
+    background-image: url(/assets/img/bg.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+
+.info img {
+    width: 35%;
+    margin-right: 50px;
+}
+
+.info p {
+    font-size: 20px;
+}
+
+.info .text {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*
+ Page About 
+*/
+.about-page {
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-page .text {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    margin: 30px 0px;
+}
+
+.about-page img {
+    margin: 20px 0px;
+}
+
+/* 
+Page SP
+*/
+.sp-page {
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sp-page .boxContainer {
+    width: 100%;
+    display: flex;
+    margin-top: 60px;
+}
+
+.sp-page .hero-img {
+    width: 40%;
+}
+
+.sp-page .text {
+    width: 60%;
+}
+
+.sp-page .text p {
+    width: 500px;
+}
+
+.sp-page .hero-img img {
+    width: 300px;
+    height: 370px;
+    border-radius: 0px 195px 0px 0px;
+    position: absolute;
+    animation: 1s slide forwards;
+}
+
+@keyframes slide {
+    0% {
+        right: 0;
+        top: 0;
+    }
+
+    100% {
+        right: -40px;
+        top: -30px;
+    }
+}
+
+.sp-page .hero-img .box-variasi {
+    position: relative;
+    width: 300px;
+    height: 370px;
+    border-radius: 0px 195px 0px 0px;
+    background-color: #DA251C;
+}
+
+.maps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+/* 
+Page Rekanan
+*/
+
+.rekanan-page {
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.rekanan-page .boxContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.rekanan-page .boxContainer a {
+    display: flex;
+    width: 40%;
+    justify-content: center;
+}
+
+.rekanan-page .boxContainer img {
+    width: 40%;
+}
+
+/* 
+Karir
+*/
+
+.karir-page {
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.karir-page .boxContainer {
+    border: 4px double #000;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 0px;
+}
+
+.karir-page .boxContainer .box.header {
+    background-color: #DA251C;
+    color: #fff;
+}
+
+.karir-page .boxContainer .box.content:hover {
+    box-shadow: 3px 6px 4px rgba(0, 0, 0, 0.25),
+        inset -5px -3px 3px rgba(0, 0, 0, 0.25),
+        inset 5px 3px 3px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.karir-page .boxContainer .box {
+    display: flex;
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 8px;
+    margin-bottom: 20px;
+    box-shadow: 2px 4px 2px rgb(0, 0, 0, 0.25);
+    background-color: #fff;
+
+}
+
+.karir-page .boxContainer .box li {
+    list-style: none;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.karir-page .boxContainer .desc.hide {
+    display: none;
+}
+
+.karir-page .boxContainer .desc {
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 20px 8px;
+    margin-bottom: 20px;
+    box-shadow: 2px 4px 2px rgb(0, 0, 0, 0.25);
+    background-color: #fff;
+    animation: 1s up forwards;
+    padding: 20px;
+}
+
+.karir-page .boxContainer .descB {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.karir-page .boxContainer .descB .head {
+    width: 30%;
+}
+
+.karir-page .boxContainer .descB .bodyB {
+    margin-top: 20px;
+    width: 70%;
+}
+
+.karir-page .boxContainer .descB li {
+    /* width: 100px; */
+    list-style: none;
+}
+.karir-page .boxContainer .descB .bodyB li {
+    text-align: justify;
+}

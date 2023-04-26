@@ -1,0 +1,73 @@
+/* page login */
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.login .gr-form {
+    position: relative;
+    margin-top: 20px;
+    z-index: 3;
+}
+
+.login .gr-form svg {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+}
+
+.login .gr-form .hide {
+    position: absolute;
+    right: 70px;
+    top: 5px;
+}
+
+.login .input-field {
+    padding: 8px 10px;
+    padding-left: 40px;
+    width: 500px;
+    border-radius: 20px;
+    border: 0px;
+    box-shadow: 1px 1px 5px black;
+    z-index: 3;
+}
+.login .input-field.red-input {
+    border: 2px solid red;
+}
+
+.login .btn {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login .btn-primary {
+    padding-right: 40px;
+    padding-left: 40px;
+    z-index: 10;
+}
+
+
+.btn-back {
+    text-decoration: none;
+    font-weight: bold;
+    color: #FE1F1D;
+}
+
+.red-notice{
+    color: #FE1F1D;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.image{
+    position: absolute;
+    opacity: 0.1;
+    width: 60%;
+    z-index: 1;
+}

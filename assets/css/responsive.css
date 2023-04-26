@@ -1,0 +1,266 @@
+/* Breakpoint */
+@media screen and (max-width: 576px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: max-content;
+        padding: 50px 0px;
+        justify-content: space-evenly;
+        width: 100vw;
+        background-color: #DA251C;
+        /* background: linear-gradient(90deg, #FE1C14 0%, #FE1F1D 6.25%, #FE2226 12.5%, #FE252F 18.75%, #FE2838 25%, #FE2A41 31.25%, #FE2D4A 37.5%, #FE3053 43.75%, #FF335C 50%, #FF3665 56.25%, #FF396E 62.5%, #FF3C77 68.75%, #FF3F80 75%, #FF4189 81.25%, #FF4492 87.5%, #FF479B 93.75%, #FF4AA4 100%); */
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 99;
+        border-radius: 20px 0px 0px 20px;
+        transform: translatey(-250px);
+        opacity: 0;
+        transition: 1s all;
+        border-radius: 0px 0px 20px 20px;
+        box-shadow: 5px 5px 2px rgb(0, 0, 0,0.25);
+    }
+    nav ul li{
+        margin-bottom: 20px;
+    }
+
+    .btn_login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4px 30px;
+        text-decoration: none;
+        color: #000;
+        background: white;
+        width: max-content;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav .logo img {
+        width: 60px;
+    }
+
+    nav {
+        padding: 20px 5%;
+    }
+
+    nav .submenu {
+        display: none;
+    }
+
+    .mobile {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile li {
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px;
+        width: 200px;
+        border-radius: 20px;
+        animation: up 1s forwards;
+    }
+
+    /* 
+    Nav Info
+    */
+    .nav-info {
+        padding: 10px 2%;
+    }
+
+    .nav-info p {
+        font-size: 10px;
+    }
+
+    /* 
+    Banner
+    */
+    h3.t-banner {
+        width: 100vw;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    /* 
+    Rekanan
+    */
+    .rekanan .box {
+        flex-direction: column;
+    }
+
+    .rekanan .box img {
+        margin-top: 20px;
+    }
+
+    /* 
+    About
+    */
+    .about p {
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    /* 
+    Info
+    */
+    .info {
+        flex-direction: column;
+    }
+
+    .info img {
+        width: 100%;
+    }
+    .info p {
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    /* 
+     Footer
+    */
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .about-side {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    footer .about-side p{
+        text-align: center;
+    }
+    footer .nav-side {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    footer .nav-side ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0px;
+    }
+    footer .nav-side ul.last {
+        margin-top: 0px;
+    }
+    .cp {
+        padding: 20px;
+        font-size: 10px;
+    }
+
+    /* 
+    Page About
+    */
+    .about-page img {
+       width: 80%;
+    }
+
+    /* 
+    Page About
+    */
+    .rekanan-page .boxContainer img {
+        width: 80%;
+    }
+
+    /* 
+    Page SP
+    */
+    .sp-page .boxContainer {
+        flex-direction: column;
+    }
+    .sp-page .hero-img {
+        width: 100%;
+    }
+    .sp-page .text {
+        width: 100%;
+    }
+    .sp-page .text p {
+        width: 80vw;
+    }
+
+    iframe{
+        width: 80vw;
+        height: 400px;
+    }
+
+    /* 
+    Karir Page
+    */
+    .karir-page .boxContainer .box li {
+        list-style: none;
+        width: 80px;
+        display: flex;
+        justify-content: center;
+    }
+    .karir-page .boxContainer .box li {
+        font-size: 10px;
+    }
+    .karir-page .boxContainer .descB {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 10px;
+        padding: 0px;
+    }
+    
+    .karir-page .boxContainer .descB .head {
+        width: 40%;
+    }
+    
+    .karir-page .boxContainer .descB .bodyB {
+        margin-top: 40px;
+        width: 60%;
+    }
+    
+    .karir-page .boxContainer .descB li {
+        /* width: 100px; */
+        list-style: none;
+    }
+    .karir-page .boxContainer .descB .bodyB li {
+        text-align: justify;
+    }
+
+    .login .input-field {
+        padding: 8px 10px;
+        padding-left: 40px;
+        width: 80vw;
+        border-radius: 20px;
+        border: 0px;
+        box-shadow: 1px 1px 5px black;
+    }
+
+    
+
+
+
+}
