@@ -64,6 +64,72 @@ class AuthController extends Controller
      */
     public function attemptLogin()
     {
+        // $captcha_response = trim($this->request->getPost('g-recaptcha-response'));
+
+        // if ($captcha_response != '') {
+        //     $keySecret = '6LfYIq4iAAAAAEraKcMK_AydKTRFfPrY9jOEvNO-';
+
+        //     $check = array(
+        //         'secret'        =>    $keySecret,
+        //         'response'        =>    $this->request->getPost('g-recaptcha-response')
+        //     );
+
+        //     $startProcess = curl_init();
+
+        //     curl_setopt($startProcess, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
+
+        //     curl_setopt($startProcess, CURLOPT_POST, true);
+
+        //     curl_setopt($startProcess, CURLOPT_POSTFIELDS, http_build_query($check));
+
+        //     curl_setopt($startProcess, CURLOPT_SSL_VERIFYPEER, false);
+
+        //     curl_setopt($startProcess, CURLOPT_RETURNTRANSFER, true);
+
+        //     $receiveData = curl_exec($startProcess);
+
+        //     $finalResponse = json_decode($receiveData, true);
+
+        //     if ($finalResponse['success']) {
+        //         $rules = [
+        //             'login'    => 'required',
+        //             'password' => 'required',
+        //         ];
+        //         if ($this->config->validFields === ['email']) {
+        //             $rules['login'] .= '|valid_email';
+        //         }
+
+        //         if (!$this->validate($rules)) {
+        //             return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        //         }
+
+        //         $login    = $this->request->getPost('login');
+        //         $password = $this->request->getPost('password');
+        //         $remember = (bool) $this->request->getPost('remember');
+
+        //         // Determine credential type
+        //         $type = filter_var($login, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
+
+        //         // Try to log them in...
+        //         if (!$this->auth->attempt([$type => $login, 'password' => $password], $remember)) {
+        //             return redirect()->back()->withInput()->with('error', $this->auth->error() ?? lang('Auth.badAttempt'));
+        //         }
+
+        //         // Is the user being forced to reset their password?
+        //         if ($this->auth->user()->force_pass_reset === true) {
+        //             return redirect()->to(route_to('reset-password') . '?token=' . $this->auth->user()->reset_hash)->withCookies();
+        //         }
+        //         $redirectURL = site_url('/user/index');
+
+        //         session()->setFlashdata('sts', 1);
+        //         return redirect()->to($redirectURL)->withCookies()->with('message', lang('Auth.loginSuccess'));
+        //     } else {
+        //         session()->setFlashdata('failed', 'Recaptcha Failed!');
+        //         return redirect()->back();
+        //     }
+        // }
+        // session()->setFlashdata('failed', 'Recaptcha Failed!');
+        // return redirect()->back();
         $rules = [
             'login'    => 'required',
             'password' => 'required',
@@ -92,8 +158,9 @@ class AuthController extends Controller
         if ($this->auth->user()->force_pass_reset === true) {
             return redirect()->to(route_to('reset-password') . '?token=' . $this->auth->user()->reset_hash)->withCookies();
         }
-        $redirectURL = site_url('/home/dashboard');
 
+        $redirectURL = session('redirect_url') ?? site_url($this->config->landingRoute);
+        unset($_SESSION['redirect_url']);
         session()->setFlashdata('sts', 1);
         return redirect()->to($redirectURL)->withCookies()->with('message', lang('Auth.loginSuccess'));
     }

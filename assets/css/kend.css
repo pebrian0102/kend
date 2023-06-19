@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400&family=Port+Lligat+Sans&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* border: 1px solid black; */
+}
+/* body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+} */
+.potrait {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    border: 4px double black;
+    width: 1000px;
+    height: 1450px;
+    position: relative;
+    margin-bottom: 9px;
+}
+.potrait .name{
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+
+.potrait .head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.potrait .head h1 {
+    font-size: 50px;
+    font-family: 'Port Lligat Sans', sans-serif;
+    margin-bottom: 5px;
+}
+.potrait .head h5 {
+    font-style: italic;
+    font-weight: 400;
+}
+.potrait .divider{
+    width: 850px;
+    height: 4px;
+    border: 2px solid black;
+    margin-top: 10px;
+}
+.potrait .detail{
+    width: 850px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.potrait .detail h3{
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 20px;
+}
+.potrait .detail .row{
+    display: flex;
+    justify-content: space-between;
+}
+.potrait .detail .group{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.potrait .detail .group p{
+    font-size: 14px;
+    font-style: italic;
+    border-bottom: 2px solid black;
+    margin-top: 10px;
+}
+.potrait .row-img{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.potrait .row-img .c-box{
+    width: 650px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 5px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.potrait .row-img .c-box .box{
+    width: 320px;
+    height: 230px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.date{
+    font-size: 12px;
+    font-style: italic;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}

@@ -38,7 +38,7 @@ class BaseController extends Controller
      *
      * @var array
      */
-    protected $helpers = ['auth', 'date', 'text', 'form', 'api', 'page', 'notif'];
+    protected $helpers = ['auth', 'date', 'text', 'form', 'api', 'kend', 'sp'];
 
     /**
      * Constructor.
@@ -52,7 +52,7 @@ class BaseController extends Controller
         $this->uri = service('uri');
         $this->mRequest = service("request");
         $this->time = Time::now('Asia/Jakarta', 'en_US');
-        
+
 
         // Preload any models, libraries, etc, here.
 

@@ -1,7 +1,10 @@
 <div class="header-top">
     <div class="container">
-        <div class="logo">
-            <a href="index.html"><img src="<?= base_url() ?>/assets/img/logo.png" alt="Logo" style="height:40px;"></a>
+        <div class="logo" style="margin-bottom:-50px;">
+            <a href="<?= base_url() ?>/home/dashboard">
+                <h3 style="font-family: 'Pathway Gothic One', sans-serif;">PT. Andalan Prima Indonesia</h3>
+                <!-- <h5>PT. ANDALAN PRIMA INDONESIA</h5> -->
+            </a>
         </div>
         <div class="header-top-right">
 

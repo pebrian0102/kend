@@ -64,7 +64,10 @@ $(document).ready(function () {
         columnDefs: [{
             visible: false
         }],
-        autoWidth: false,
+        fixedColumns: {
+            left: 1,
+            right: 1
+        },
         select: true,
         fixedHeader: true,
         autoWidth: false,
@@ -75,6 +78,7 @@ $(document).ready(function () {
         pageLength: 50,
         scrollX: true,
     });
+
     $('#table1').DataTable({
         dom: 'Bfrtip',
         lengthMenu: [
@@ -146,6 +150,85 @@ $(document).ready(function () {
         autoWidth: false,
         paging: true,
         scrollY: 400,
+        scrollCollapse: true,
+        scroller: true,
+        pageLength: 50,
+        scrollX: true,
+    });
+    $('#table2').DataTable({
+        dom: 'Bfrtip',
+        lengthMenu: [
+            [50, 70, 100, -1],
+            [50, 70, 100, 'All'],
+        ],
+        buttons: [
+            {
+                extend: 'collection',
+                text: 'Export',
+                buttons: [
+                    {
+                        extend: 'print',
+                        text: 'Print all',
+                        exportOptions: {
+                            modifier: {
+                                selected: null
+                            },
+                            columns: ':visible'
+                        }
+                    },
+                    {
+                        extend: 'print',
+                        text: 'Print selected',
+                        exportOptions: {
+                            columns: ':visible'
+                        }
+                    },
+                    {
+                        extend: 'copy',
+                        exportOptions: {
+                            columns: ':visible'
+                        }
+                    },
+                    {
+                        extend: 'pdf',
+                        exportOptions: {
+                            columns: ':visible'
+                        }
+                    },
+                    {
+                        extend: 'csv',
+                        exportOptions: {
+                            columns: ':visible'
+                        }
+                    },
+                    {
+                        extend: 'excel',
+                        exportOptions: {
+                            columns: ':visible'
+                        }
+                    },
+
+                ]
+            },
+            {
+                extend: 'colvis',
+                postfixButtons: ['colvisRestore']
+            },
+            'pageLength'
+
+        ],
+        columnDefs: [{
+            visible: false
+        }],
+        fixedColumns: {
+            left: 1,
+            right: 1
+        },
+        select: true,
+        fixedHeader: true,
+        autoWidth: false,
+        paging: true,
+        scrollY: 200,
         scrollCollapse: true,
         scroller: true,
         pageLength: 50,

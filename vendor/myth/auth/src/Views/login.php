@@ -5,17 +5,21 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="<?= base_url() ?>/assets/img/icon.png" type="image/x-icon">
+	<!-- <link rel="shortcut icon" href="<?= base_url() ?>/assets/img/icon2.png" type="image/x-icon"> -->
 	<title>PT. Andalan Prima Indonesia</title>
-	<!-- Style Css -->
+	<!-- SweetAlert2 -->
+	<link rel="stylesheet" href="<?= base_url() ?>/dist/assets/extensions/sweetalert2/sweetalert2.min.css">
 	<link rel="stylesheet" href="<?= base_url() ?>/assets/css/layout.css">
 	<link rel="stylesheet" href="<?= base_url() ?>/assets/css/login.css">
 	<link rel="stylesheet" href="<?= base_url() ?>/assets/css/responsive.css">
 </head>
 
 <body>
+	<!-- Flashdata -->
+	<div class="flash-data-success" data-flashdata="<?= session()->getFlashdata('success'); ?>"></div>
+	<div class="flash-data-warning" data-flashdata="<?= session()->getFlashdata('failed'); ?>"></div>
 	<div class="login">
-		<img src="<?= base_url() ?>/assets/img/logo.png" alt="logo API" class="image" draggable="false">
+		<img src="<?= base_url() ?>/assets/img/logo_login.png" alt="logo API" class="image" draggable="false">
 		<small><?= view('Myth\Auth\Views\_message_block') ?></small>
 		<div class="heading bebas"><?= lang('Auth.loginTitle') ?></div>
 		<form action="<?= base_url('login') ?>" method="post">
@@ -55,20 +59,52 @@
 					<?= session('errors.password') ?>
 				</div>
 			</div>
+			<div class="gr-form">
+				<div class="g-recaptcha" data-sitekey="6LfYIq4iAAAAABnpcjN7PFoCwvYTB50MuFWS4QBv"></div>
+			</div>
 			<div class="btn">
 				<button type="submit" class="btn-primary">Login</button>
 			</div>
 		</form>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- Sweetalert -->
+	<script src="<?= base_url() ?>/dist/assets/extensions/sweetalert2/sweetalert2.min.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js"></script>
 	<script>
-		$(document).ready(function() {
-			$(document).keydown(function(e) {
-				if (e.altKey && e.which == 72) {
-					document.location.href = '<?= base_url() ?>';
-				}
+		const flashDataSts = $('.flash-data-sts').data('flashdata');
+		const flashDataSuccess = $('.flash-data-success').data('flashdata');
+		const flashDataWarning = $('.flash-data-warning').data('flashdata');
+		const flashDataDanger = $('.flash-data-danger').data('flashdata');
+		var Toast = Swal.mixin({
+			toast: false,
+			position: 'center',
+			showConfirmButton: true,
+			timer: 6000
+		});
+		var Toast2 = Swal.mixin({
+			position: 'center',
+			showConfirmButton: true,
+			timer: 3000
+		});
+		if (flashDataSuccess) {
+			Toast.fire({
+				icon: 'success',
+				title: flashDataSuccess,
 			})
-		})
+		}
+		if (flashDataWarning) {
+			Toast.fire({
+				icon: 'warning',
+				title: flashDataWarning
+			})
+		}
+		if (flashDataDanger) {
+			Toast2.fire({
+				icon: 'warning',
+				title: flashDataDanger
+			})
+		}
 	</script>
 	<script>
 		function togglePassword() {

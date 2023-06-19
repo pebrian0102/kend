@@ -14,7 +14,7 @@
                             <h4>Pengumuman</h4>
                         </div>
                         <div class="card-body">
-                            Selamat Datang!
+                            <?= getinfo() ?>
                         </div>
                     </div>
                 </div>

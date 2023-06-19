@@ -43,11 +43,11 @@ class User extends BaseController
 
     public function update()
     {
-        $id = $this->mRequest->getVar('id');
-        $username = $this->mRequest->getVar('username');
+        $id = $this->request->getVar('id');
+        $username = $this->request->getVar('username');
         // cek fullnamenya
-        $usernameLama = $this->userModel->getUser($this->mRequest->getVar('usernameLama'));
-        if ($usernameLama['username'] == $this->mRequest->getVar('username')) {
+        $usernameLama = $this->userModel->getUser($this->request->getVar('usernameLama'));
+        if ($usernameLama['username'] == $this->request->getVar('username')) {
             $rule_username = 'required';
         } else {
             $rule_username = 'required|is_unique[users.username]|alpha_dash';

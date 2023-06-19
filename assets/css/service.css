@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400&family=Port+Lligat+Sans&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* border: 1px solid black; */
+}
+/* body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+} */
+.potrait {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    border: 4px double black;
+    width: 1000px;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 130px;
+    margin-bottom: 10px;
+    height: 1400px;
+}
+.potrait.one{
+    padding-top: 130px;
+    margin-bottom: 10px;
+    height: 1450px;
+}
+.potrait.center{
+    align-items: center;
+    justify-content: center;
+}
+
+.potrait .head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.potrait h1{
+    font-size: 40px;
+    color:#FFD600;
+    border-bottom: 5px solid white;
+    width: max-content;
+}
+.potrait h2{
+    font-size: 32px;
+    color:#FFD600;
+    font-family: 'Port Lligat Sans', sans-serif;
+    margin-top:5px;
+}
+.potrait h4{
+    color: #fff;
+}
+
+.potrait .row{
+    display: flex;
+    justify-content: space-between;
+}
+.potrait .row .box{
+    border: 4px solid black;
+    padding: 20px;
+    padding-top: 10px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 4px 8px 5px 1px rgba(0, 0, 0, 0.25);
+    margin-top: 40px;
+    width: 100%;
+    height: 180px;
+}
+.potrait .row .box-img{
+    border: 4px solid black;
+    padding: 20px;
+    padding-top: 5px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 4px 8px 5px 1px rgba(0, 0, 0, 0.25);
+    margin-top: 40px;
+    width: 800px;
+}
+.potrait .row .box-img img{
+    width: 100%;
+}
+.potrait .box2{
+    padding: 20px;
+    padding-top: 10px;
+    border-radius: 20px;
+    margin-top: 40px;
+    width: 45%;
+    height: 120px;
+}
+.potrait .box2 .title{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.potrait .box3{
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+    width: 45%;
+    height: 50px;
+}
+.potrait .box3.long{
+    width: 100%;
+    margin-top: 20px;
+}
+.potrait .box3 p{
+    border-bottom: 2px solid black;
+    font-size: 14px;
+    font-style: italic;
+}
+.potrait .box3 .title{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.potrait .box .row .title{
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 4px solid black;
+    margin-bottom: 10px;
+}
+.potrait .row .group{
+    display: flex;
+    justify-content: space-between;
+}
+.potrait .row .group .check{
+    display: flex;
+    width: 150px;
+}
+.potrait .row .group .check i{
+    display: flex;
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 10px;
+}
+.potrait .row .group .check i.icon_app{
+    background-image: url(../../assets/img/app.png);
+}
+.potrait .row .group .check i.icon_danied{
+    background-image: url(../../assets/img/danied.png);
+}
+.potrait .row .group .check i.secondary{
+    background: #b4b4b4;
+}
+.potrait .top{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.potrait .top2{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.potrait .bottom{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+table{
+    width: 900px;
+    margin-top: 30px;
+}
+table,th,td{
+    /* border: 2px solid black; */
+    border-collapse: collapse;
+}
+th,td{
+    padding: 4px;
+}
+th{
+    font-size: 14px;
+    border: 1px solid black;
+}
+td{
+    vertical-align: top;
+    background-color: #fff;
+    font-size: 12px;
+    border: 1px solid black;
+}
+table thead{
+    background-color: #eaeaea;
+}
+.center{
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+.potrait.center h6{
+    text-align: left;
+}
+
+td.nb {
+    position: relative;
+    border: 0 !important;
+}
+
+/* Pseudo-element to cover up the borders */
+td.nb::after {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: block;
+    content: '';
+    width: 100%;
+    height: calc(100% + 1px);
+    border: 1px solid white;
+    box-sizing: border-box;
+  }

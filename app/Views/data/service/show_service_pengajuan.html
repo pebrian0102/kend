@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service ?= $srv->nosrv ?></title>
+    <link rel="stylesheet" href="../../../../../assets/css/service.css" />
+  </head>
+
+  <body>
+    <section class="potrait one" style="background: #fff">
+      <div class="top">
+        <h5>PT. ANDALAN PRIMA INDONESIA</h5>
+        <h6>STOCK POINT JAKARTA</h6>
+      </div>
+      <div class="top2">
+        <h3>No. 1010101010</h3>
+      </div>
+      <div class="bottom">
+        <small><i>2023-05-28 00:00:00</i></small>
+      </div>
+      <div class="head">
+        <h3>PENGAJUAN</h3>
+        <h1 style="color: #000; border-bottom-color: #000">
+          SERVICE KENDARAAN
+        </h1>
+        <h2 style="color: #000">B 123 BB</h2>
+        <h4 style="color: #000">MITSUBISHI / FE304</h4>
+      </div>
+
+      <div class="detail">
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 25%">Jenis Service</th>
+              <th style="width: 50%">Rincian Masalah</th>
+              <th style="width: 25%">Biaya</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mesin</td>
+              <td>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Facilis excepturi, rem, dolores, illo hic dicta sit aspernatur
+                quam ab asperiores architecto in quo. Laudantium quasi
+                exercitationem mollitia magnam, dolorem ipsam?
+              </td>
+              <td class="center">250000</td>
+            </tr>
+            <tr>
+              <td>Mesin</td>
+              <td>AKI MOBIL</td>
+              <td class="center">250000</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3 style="margin-top: 20px">Total Biaya : 150000</h3>
+        <div class="row" style="justify-content: center">
+          <div class="box2">
+            <div class="title">APPROVAL</div>
+            <div class="group">
+              <div class="g-check">
+                <div class="check">
+                  <i class="icon_app"></i>
+                  SPV JAKARTA
+                </div>
+                <small>2023-05-29 00:00:00</small>
+              </div>
+              <div class="g-check">
+                <div class="check">
+                  <i class="icon_danied"></i>
+                  NSM
+                </div>
+                <small>2023-05-29 00:00:00</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+      document.onkeyup = function (e) {
+        if (e.which == 49) {
+          $(".potrait").prop("style", "background: #fff");
+          $(".head h1").prop(
+            "style",
+            "color: #000000; border-bottom-color: #000000"
+          );
+          $(".head h2").prop("style", "color: #000000;");
+          $(".head h4").prop("style", "color: #000000;");
+          $(".top h3").prop("style", "color: #000000;");
+          $(".top h5").prop("style", "color: #000000;");
+          $(".top h6").prop("style", "color: #000000;");
+          $(".bottom small i").prop("style", "color: #000000;");
+        } else if (e.which == 50) {
+          $(".potrait").prop("style", "background: #f6fadd");
+          $(".head h1").prop(
+            "style",
+            "color: #000000; border-bottom-color: #000000"
+          );
+          $(".head h2").prop("style", "color: #000000;");
+          $(".head h4").prop("style", "color: #000000;");
+          $(".top h3").prop("style", "color: #000000;");
+          $(".top h5").prop("style", "color: #000000;");
+          $(".top h6").prop("style", "color: #000000;");
+          $(".bottom small i").prop("style", "color: #000000;");
+        } else if (e.which == 51) {
+          $(".potrait").prop(
+            "style",
+            "background-image: url(../../../../../assets/img/bg2.png)"
+          );
+          $(".head h1").prop(
+            "style",
+            "color: #FFD600; border-bottom-color: #FFD600"
+          );
+          $(".head h2").prop("style", "color: #FFD600;");
+          $(".head h4").prop("style", "color: #FFD600;");
+          $(".top h3").prop("style", "color: #ffffff;");
+          $(".top h5").prop("style", "color: #ffffff;");
+          $(".top h6").prop("style", "color: #ffffff;");
+          $(".bottom small i").prop("style", "color: #ffffff;");
+        }
+      };
+      window.onload = function () {
+        document.addEventListener(
+          "contextmenu",
+          function (e) {
+            e.preventDefault();
+          },
+          false
+        );
+        document.addEventListener(
+          "keydown",
+          function (e) {
+            // "I" key
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+              disabledEvent(e);
+            }
+            // "J" key
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+              disabledEvent(e);
+            }
+            // "S" key + macOS
+            if (
+              e.keyCode == 83 &&
+              (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)
+            ) {
+              disabledEvent(e);
+            }
+            // "U" key
+            if (e.ctrlKey && e.keyCode == 85) {
+              disabledEvent(e);
+            }
+            // "F12" key
+            if (event.keyCode == 123) {
+              disabledEvent(e);
+            }
+          },
+          false
+        );
+
+        function disabledEvent(e) {
+          if (e.stopPropagation) {
+            e.stopPropagation();
+          } else if (window.event) {
+            window.event.cancelBubble = true;
+          }
+          e.preventDefault();
+          return false;
+        }
+      };
+
+      // alert("tekan angka 1-3 untuk mengubah tema \ntekan ctrl+p untuk print");
+    </script>
+  </body>
+</html>
